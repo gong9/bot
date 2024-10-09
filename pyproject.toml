@@ -1,0 +1,25 @@
+[project]
+name = "langchain01"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "gongzhen", email = "517441540@qq.com"},
+]
+dependencies = [
+    "langchain-openai>=0.0.5",
+    "bs4>=0.0.2",
+    "chromadb>=0.4.22",
+    "langchainhub>=0.1.14",
+    "langserve>=0.0.41",
+    "sse-starlette>=2.0.0",
+    "langchain==0.1.13",
+    "bilibili-api-python>=16.2.0",
+    "pydantic==1.10.13",
+]
+requires-python = "==3.9.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = false
