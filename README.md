@@ -6,5 +6,5 @@
 ```shell
 pdm install
 pdm run ./src/data.py
-pdm run robot.py
+pdm run ./src/robot.py
 ```

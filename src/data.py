@@ -5,6 +5,10 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import Chroma
 from langchain_openai import OpenAIEmbeddings
 
+import os
+
+os.environ['OPENAI_API_BASE'] = 'https://api.chatanywhere.com.cn/v1'
+
 
 loader = WebBaseLoader(
     web_path="https://www.gov.cn/jrzg/2013-10/25/content_2515601.htm",
