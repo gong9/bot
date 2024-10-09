@@ -9,7 +9,6 @@ import os
 
 os.environ['OPENAI_API_BASE'] = 'https://api.chatanywhere.com.cn/v1'
 
-
 loader = WebBaseLoader(
     web_path="https://www.gov.cn/jrzg/2013-10/25/content_2515601.htm",
     bs_kwargs=dict(parse_only=bs4.SoupStrainer(
@@ -23,7 +22,6 @@ docs = loader.load()
 # 文本切割
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
 splits = text_splitter.split_documents(docs)
-
 
 # 向量化存储
 db = Chroma.from_documents(documents=splits, embedding=OpenAIEmbeddings(), persist_directory="./chroma_db")
