@@ -10,14 +10,15 @@ import os
 os.environ['OPENAI_API_BASE'] = 'https://api.chatanywhere.com.cn/v1'
 
 loader = WebBaseLoader(
-    web_path="https://www.gov.cn/jrzg/2013-10/25/content_2515601.htm",
+    web_path="https://www.npmjs.com/package/@anov/gis",
     bs_kwargs=dict(parse_only=bs4.SoupStrainer(
-            class_=("p1")
-        ))
+        ["p",]
+    ))
 )
-
 # 文档加载
 docs = loader.load()
+
+print(docs)
 
 # 文本切割
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)

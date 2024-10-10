@@ -27,12 +27,12 @@ prompt_template = PromptTemplate.from_template(prompt_template_str)
 
 
 # 填充context
-vectorstore = Chroma(persist_directory='../../chroma_db', embedding_function=OpenAIEmbeddings())
+vectorstore = Chroma(persist_directory='./chroma_db', embedding_function=OpenAIEmbeddings())
 retriever = vectorstore.as_retriever(search_type="similarity", search_kwargs={"k": 4})
 
-docs = retriever.invoke("发生争议如何解决？")
+docs = retriever.invoke("什么是@anov/gis?")
 
-# print(len(docs))
+
 
 def format_docs(docs):
     return "\n\n".join(doc.page_content for doc in docs)
