@@ -6,7 +6,6 @@ from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain_core.output_parsers import StrOutputParser
 from fastapi import FastAPI
 from langserve import add_routes
-
 import os
 
 os.environ["OPENAI_API_BASE"] = "https://api.chatanywhere.com.cn/v1"
@@ -31,8 +30,6 @@ vectorstore = Chroma(
     persist_directory="./chroma_db", embedding_function=OpenAIEmbeddings()
 )
 retriever = vectorstore.as_retriever(search_type="similarity", search_kwargs={"k": 4})
-
-docs = retriever.invoke("什么是@anov/gis?")
 
 
 def format_docs(docs):
