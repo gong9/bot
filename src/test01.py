@@ -4,7 +4,7 @@ from langchain_openai import ChatOpenAI
 
 import os
 
-os.environ['OPENAI_API_BASE'] = 'https://api.chatanywhere.com.cn/v1'
+os.environ["OPENAI_API_BASE"] = "https://api.chatanywhere.com.cn/v1"
 
 # 1. 实例化一个 CommaSeparatedListOutputParser对象
 output_parser = CommaSeparatedListOutputParser()

@@ -4,7 +4,7 @@ from langchain_openai import ChatOpenAI
 from langchain.chains import LLMChain
 import os
 
-os.environ['OPENAI_API_BASE'] = 'https://api.chatanywhere.com.cn/v1'
+os.environ["OPENAI_API_BASE"] = "https://api.chatanywhere.com.cn/v1"
 
 memory = ConversationBufferMemory(memory_key="chat_history")
 
@@ -23,7 +23,7 @@ llm = ChatOpenAI(temperature=0)
 memory_chain = LLMChain(
     llm=llm,
     prompt=prompt_template,
-    verbose=True, 
+    verbose=True,
     memory=memory,
 )
 
