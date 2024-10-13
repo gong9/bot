@@ -10,7 +10,6 @@ import os
 
 os.environ["OPENAI_API_BASE"] = "https://api.chatanywhere.com.cn/v1"
 
-
 prompt_template_str = """
 You are an assistant for question-answering tasks. Use the following pieces of retrieved context to answer the question. If you don't know the answer, just say that you don't know. Use three sentences maximum and keep the answer concise.
 

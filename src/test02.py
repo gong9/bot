@@ -9,7 +9,7 @@ def GenPrompt(from_lang, to_lang, text):
 
 print(GenPrompt(from_lang=1, to_lang=2, text=3))
 
-# PromptTemplate的基本使用
+# promptTemplate的基本使用
 
 from langchain.prompts.prompt import PromptTemplate
 
